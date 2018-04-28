@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $flag = 1;
-    $("#myName").focusout(function() {
+    $("#firstName").focusout(function() {
         if ($(this).val() == '') {
             $(this).css("border-color", "#FF0000");
             $('#submit').attr('disabled', true);
@@ -12,15 +12,15 @@ $(document).ready(function() {
 
         }
     });
-    $("#lastname").focusout(function() {
+    $("#lastName").focusout(function() {
         if ($(this).val() == '') {
             $(this).css("border-color", "#FF0000");
             $('#submit').attr('disabled', true);
-            $("#error_lastname").text("* You have to enter your Last name!");
+            $("#error_lastName").text("* You have to enter your Last name!");
         } else {
             $(this).css("border-color", "#2eb82e");
             $('#submit').attr('disabled', false);
-            $("#error_lastname").text("");
+            $("#error_lastName").text("");
         }
     });
     $("#dob").focusout(function() {
@@ -70,15 +70,15 @@ $(document).ready(function() {
     });
 
     $("#submit").click(function() {
-        if ($("#myName").val() == '') {
-            $("#myName").css("border-color", "#FF0000");
+        if ($("#firstName").val() == '') {
+            $("#firstName").css("border-color", "#FF0000");
             $('#submit').attr('disabled', true);
             $("#error_name").text("* You have to enter your first name!");
         }
-        if ($("#lastname").val() == '') {
-            $("#lastname").css("border-color", "#FF0000");
+        if ($("#lastName").val() == '') {
+            $("#lastName").css("border-color", "#FF0000");
             $('#submit').attr('disabled', true);
-            $("#error_lastname").text("* You have to enter your Last name!");
+            $("#error_lastName").text("* You have to enter your Last name!");
         }
         if ($("#dob").val() == '') {
             $("#dob").css("border-color", "#FF0000");

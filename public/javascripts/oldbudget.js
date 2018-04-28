@@ -149,7 +149,8 @@ var UIController = (function() {
         precentageLabel: '.budget__expenses--percentage',
         container: '.container',
         expensePercLabel: '.item__percentage',
-        dateLabel: '.budget__title--month'
+        dateLabel: '.budget__title--month',
+        budgetDateLabel: '.budget__title--month'
     }
 
     var formatNumber = function(num, type) {
@@ -346,6 +347,8 @@ var controller = (function(budgetCtrl, UICtrl) {
             splitID = itemID.split('-');
             type = splitID[0];
             id = parseInt(splitID[1]);
+            console.log("id " + id);
+            console.log("itemID " + itemID);
 
             //1. delete the item from the data structre
             budgetCtrl.deleteItem(type, id);
